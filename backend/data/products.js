@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: "1",
     name: "Headset",
     image: "/images/headset1.jpg",
     description: "silver color headset",
@@ -12,7 +11,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: "2",
     name: "Iphone XR",
     image: "/images/iphonex.jpg",
     description: "colour yellow",
@@ -24,7 +22,6 @@ const products = [
     numReviews: 9,
   },
   {
-    _id: "3",
     name: "Iphone X",
     image: "/images/iphonex1.jpg",
     description: "colour silver",
@@ -36,7 +33,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: "4",
     name: "Adidas Sneakers",
     image: "/images/sneakers.jpg",
     description: "Colour black and white",
@@ -48,7 +44,6 @@ const products = [
     numReviews: 7,
   },
   {
-    _id: "5",
     name: "PS 5",
     image: "/images/ps5.jpg",
     description: "Play Station console",
@@ -60,7 +55,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: "6",
     name: "Water Heater",
     image: "/images/heater.jpg",
     description: "Water heater",
@@ -72,4 +66,4 @@ const products = [
     numReviews: 2,
   },
 ];
-module.exports = products;
+export default products;
