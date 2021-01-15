@@ -17,9 +17,9 @@ const products = [
     brand: "Iphone",
     category: "Mobile Phone",
     price: 799.9,
-    countInStock: 0,
+    countInStock: 9,
     rating: 4.1,
-    numReviews: 9,
+    numReviews: 0,
   },
   {
     name: "Iphone X",
