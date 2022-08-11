@@ -60,7 +60,6 @@ const registerUser = asyncHandler(async (req, res) => {
 // @desc    Get user profile
 // @route   GET /api/users/profile
 // @access  Private
-
 const getUserProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
 
@@ -75,6 +74,15 @@ const getUserProfile = asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("User not found");
   }
+});
+
+// @desc    Get all users
+// @route   GET /api/users
+// @access  Private/admin
+
+const getUsers = asyncHandler(async (req, res) => {
+  const users = await User.find({});
+  res.send(users);
 });
 
 // @desc    Update user profile
@@ -105,4 +113,4 @@ const updateUserProfile = asyncHandler(async (req, res) => {
   }
 });
 
-export { authUser, registerUser, getUserProfile, updateUserProfile };
+export { authUser, registerUser, getUserProfile, updateUserProfile, getUsers };
