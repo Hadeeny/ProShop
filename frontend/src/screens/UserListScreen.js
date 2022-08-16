@@ -30,7 +30,7 @@ const UserListScreen = ({ history }) => {
     } else {
       history.push("/login");
     }
-  }, [dispatch, history, deleteSuccess]);
+  }, [dispatch, history, userInfo, deleteSuccess]);
 
   return (
     <>

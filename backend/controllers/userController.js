@@ -93,9 +93,10 @@ const getUsers = asyncHandler(async (req, res) => {
 // @access  Private/admin
 
 const getUserById = asyncHandler(async (req, res) => {
-  const user = await (await User.findById(req.params.id)).select("-password");
+  const user = await User.findById(req.params.id).select("-password");
+
   if (user) {
-    res.send(user);
+    res.json(user);
   } else {
     res.status(404);
     throw new Error("User not found");
