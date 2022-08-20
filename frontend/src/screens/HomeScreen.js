@@ -6,7 +6,8 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { listProducts } from "../actions/productActions";
 
-const HomeScreen = () => {
+const HomeScreen = ({ match }) => {
+  const keyword = match.params.keyword;
   const dispatch = useDispatch();
 
   const productList = useSelector((state) => state.productList);
@@ -14,8 +15,8 @@ const HomeScreen = () => {
   const { loading, error, products } = productList;
 
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts(keyword));
+  }, [dispatch, keyword]);
 
   /* note that the products imported is being used as a VARIABLE and not a
         component, as products.js doesn't contain an import or export
