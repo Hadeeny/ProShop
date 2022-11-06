@@ -19,7 +19,7 @@ const Header = () => {
   };
   return (
     <header>
-      <Navbar bg="warning" variant="white" expand="lg" collapseOnSelect>
+      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>ProShop</Navbar.Brand>
